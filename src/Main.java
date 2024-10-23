@@ -6,8 +6,8 @@ public class Main {
 
         System.out.println("Задание 1");
         System.out.println("Какая у вас операционная система? 0 - айфон, 1 - андроид");
-        int operationSystem1 = scanner.nextInt();
-        if(operationSystem1 == 0){
+        int clientOS = scanner.nextInt();
+        if(clientOS == 0){
             System.out.println("Установите версию приложения для iOS по ссылке\n");
         } else {
             System.out.println("Установите версию приложения для Android по ссылке");
@@ -15,22 +15,17 @@ public class Main {
 
         System.out.println("\nЗадание 2");
         System.out.println("Какая у вас операционная система? 0 - айфон, 1 - андроид");
-        int operationSystem2 = scanner.nextInt();
+        int operationSystem = scanner.nextInt();
         System.out.println("В каком году был выпущен телефон?");
         int clientDeviceYear = scanner.nextInt();
-        switch (operationSystem2){
-            case 0: {
-                if (clientDeviceYear < 2015) {
-                    System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-                } else System.out.println("Установите версию приложения для iOS по ссылке\n");
-                break;
-            }
-            case 1: {
-                if(clientDeviceYear < 2015) {
-                    System.out.println("Установите облегченную версию приложения для Android по ссылке");
-                } else System.out.println("Установите версию приложения для Android по ссылке");
-                break;
-            }
+        if(operationSystem == 1) {
+            if (clientDeviceYear < 2015) {
+                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+            } else System.out.println("Установите версию приложения для iOS по ссылке\n");
+        } else  {
+            if(clientDeviceYear < 2015) {
+                System.out.println("Установите облегченную версию приложения для Android по ссылке");
+            } else System.out.println("Установите версию приложения для Android по ссылке");
         }
 
         System.out.println("\nЗадание 3");
